@@ -8,7 +8,8 @@ public interface Urls {
     interface Admin {
         String ROOT = "/admin";
         String GET_ADMIN_LIST = "";
-        String GET_ADMIN_INFO = "/{adminId}";
+        String GET_ADMIN_BY_ID = "/{adminId}";
+        String GET_ADMIN_BY_PROFILE = "";
         String SAVE_ADMIN = "";
         String UPDATE_ADMIN = "/{adminId}";
         String DELETE_ADMIN = "/{adminId}";

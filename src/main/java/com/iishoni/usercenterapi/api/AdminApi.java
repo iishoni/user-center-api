@@ -11,8 +11,11 @@ public interface AdminApi {
     @GetMapping(Urls.Admin.GET_ADMIN_LIST)
     ResponseVo<Page<Admin>> getAdminList(@RequestParam Integer pageNum, @RequestParam Integer pageSize);
 
-    @GetMapping(Urls.Admin.GET_ADMIN_INFO)
-    ResponseVo<Admin> getAdminInfo(@PathVariable Long adminId);
+    @GetMapping(Urls.Admin.GET_ADMIN_BY_ID)
+    ResponseVo<Admin> getAdminById(@PathVariable Long adminId);
+
+    @GetMapping(Urls.Admin.GET_ADMIN_BY_PROFILE)
+    ResponseVo<Admin> getAdminByProfile(@RequestParam String uname, @RequestParam String pwd);
 
     @PostMapping(Urls.Admin.SAVE_ADMIN)
     ResponseVo saveAdmin(@RequestBody Admin admin);
